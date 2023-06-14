@@ -1,69 +1,143 @@
-const totalmarks = 300;
-const mohib = {
-    mathmarks: 75,
-    englishmarks: 64,
-    urdumarks: 67,
-  },
-  arshman = {
-    mathmarks: 40,
-    englishmarks: 60,
-    urdumarks: 25,
-  },
-  junaid = {
-    mathmarks: 58,
-    englishmarks: 64,
-    urdumarks: 78,
+//assignment no 01 //
+function sumOfEvenNumbers(numbers) {
+  let i,
+    sum = 0;
+
+  for (i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 == 0) {
+      sum += numbers[i];
+    }
+  }
+  return sum;
+}
+let sum = sumOfEvenNumbers([12, 2, 5, 6, 4, 8]);
+console.log("sum of even numbers is" + sum);
+
+// ----------******----------
+
+//assignment no 2 //
+
+function countVowels(string) {
+  let vowels = "aeiouAEIOU";
+  let count = 0;
+
+  for (let i = 0; i < string.length; i++) {
+    for (let j = 0; a < vowels.length; a++) {
+      if (string[i] == vowels[a]) {
+        count++;
+        break;
+      }
+    }
+  }
+  return count;
+}
+console.log("total vowels is" + countVowels("angoor khattay hay"));
+countVowels(string)
+
+// ----------******----------
+
+// assignment 03
+
+let string = ["naryal","mosammi","anar","seeb","annanas"]
+function findlongestword(string) {
+  let stringlength = string[0].length;
+  for (let i =1; i < string.length; i++){
+    if(string[i].length > stringlength){
+       stringlenght = string[i].length
+    }
+     }
+console.log("Biggest String Is " + stringlength)
+}
+  findlongestword(string)
+
+  // ----------******----------
+
+  // assignment 04
+
+  function getAverage (numbers) {
+  let sum = 0
+  for (let i = 0; i < numbers.length; i++) {
+       sum += numbers[i]
+  }
+  return sum / numbers.length;
+}
+let result = getAverage ([2,3,4,5,6]);
+ console.log("average is " + result )
+
+ 
+  // ----------******----------
+ 
+
+//  assignment 05
+
+function findKeys() {
+  let person = {
+    name: "mohib",
+    age: 19,
+    city: "karachi",
   };
 
-const mmarks = mohib.englishmarks + mohib.mathmarks + mohib.urdumarks;
-const amarks = arshman.englishmarks + arshman.mathmarks + arshman.urdumarks;
-const jmarks = junaid.englishmarks + junaid.mathmarks + junaid.urdumarks;
-
-const mpercentage = (mmarks / totalmarks) * 100;
-const apercentage = (amarks / totalmarks) * 100;
-const jpercentage = (jmarks / totalmarks) * 100;
-
-console.log("total marks in exam" + " " + totalmarks);
-console.log("---------------------------------");
-console.log("---------------------------------");
-
-console.log("Mohib's Result");
-console.log("Mohib gets" + " " + mmarks);
-console.log("Mohib's percentage" + " " + mpercentage);
-if (mpercentage > 45) {
-  console.log("you are Pass");
-} else "you are fail";
-
-if (mpercentage > 60) {
-  console.log("your grade is B");
+  return object.keys(person);
 }
+console.log(findKeys());
 
-console.log("---------------------------------");
-console.log("---------------------------------");
 
-console.log("Arshman's Result");
-console.log("Arshman gets" + " " + amarks);
-console.log("Arshman's percentage" + " " + apercentage);
-if (apercentage > 45) {
-  console.log(" you are Pass");
-} else console.log("you are fail");
+  // ----------******----------
 
-if (apercentage > 60) {
-  console.log("your grade is B");
+  // assignment 06
+
+  const person = [
+    { name: "mohib", age: 19 },
+    { name: "Anwar", age: 22 },
+    { name: "haider", age: 25 },
+  ];
+  function valueOfKeys(person) {
+    const name = person.name;
+    const age = person.age;
+    return { name, age };
+  }
+  
+  for (let i = 0; i < person.length; i++) {
+    const result = valueOfKeys(person[i]);
+    console.log(person[i].name);
+    console.log(person[i].age);
+  }
+
+    // ----------******----------
+
+  // assignment 07
+
+  const friuts = ["banana", "chikoo", "banana", "apple", "chikoo", "pineapple"];
+
+function simplifyStrings(strings) {
+  for (let i = 0; i < strings.length - 1; i++) {
+    for (let j = i + 1; j < strings.length; j++) {
+      if (strings[i] == strings[j]) {
+        strings.splice(j, 1);
+        j--;
+      }
+    }
+  }
+  console.log(strings);
 }
+simplifyStrings(friuts);
 
-console.log("---------------------------------");
-console.log("---------------------------------");
 
-console.log("Junaid's Result");
-console.log("Junaid gets" + " " + jmarks);
-console.log("Junaid's percentage" + " " + jpercentage);
-if (jpercentage > 45) {
-  console.log(" you are Pass");
-} else "you are fail";
-if (jpercentage > 60) {
-  console.log("your grade is B");
-}
+// ----------******----------
 
-console.log("---------------------------------");
-console.log("---------------------------------");
+  // assignment 08
+
+  function numberOfProduct(numbers) {
+    let product = 1;
+  
+    for (let i = 0; i < numbers.length; i++) {
+      product *= numbers[i];
+    }
+    console.log("total product is " + product);
+  }
+  
+  numberOfProduct([2, 5, 8, 6, 4, 7]);
+
+
+
+  
